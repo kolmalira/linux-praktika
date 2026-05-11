@@ -1,1 +1,5 @@
-ps -eo pid,%cpu,%mem,time,cmd --sort=-%cpu | grep apache2
+   6523  0.0  0.0 00:00:00 /usr/sbin/apache2 -k start
+   6740  0.0  0.0 00:00:00 /usr/bin/htcacheclean -d 120 -p /var/cache/apache2/mod_cache_disk -l 300M -n
+   6525  0.0  0.0 00:00:00 /usr/sbin/apache2 -k start
+   6526  0.0  0.0 00:00:00 /usr/sbin/apache2 -k start
+   8429  0.0  0.0 00:00:00 grep --color=auto apache2
