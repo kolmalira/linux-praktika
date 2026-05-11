@@ -1,2 +1,1 @@
-ps -eo pid,%cpu,%mem,time,cmd --sort=-%cpu | grep apache2 > sit1.txt
-
+ps -eo pid,%cpu,%mem,time,cmd --sort=-%cpu | grep apache2
