@@ -1,0 +1,41 @@
+ps -p 10301 -o pid,cmd
+    PID CMD
+  10301 nginx: worker process
+c конф nginx
+sudo lsof -p 10301 | grep nginx
+nginx   10301 www-data  cwd       DIR              259,6     4096       2 /
+nginx   10301 www-data  rtd       DIR              259,6     4096       2 /
+nginx   10301 www-data  txt       REG              259,6  1313752 5404393 /usr/sbin/nginx
+nginx   10301 www-data  mem       REG              259,6  2125328 5411869 /usr/lib/x86_64-linux-gnu/libc.so.6
+nginx   10301 www-data  mem       REG              259,6  5309400 5385641 /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+nginx   10301 www-data  mem       REG              259,6    52144 5375335 /usr/lib/x86_64-linux-gnu/libnss_sss.so.2
+nginx   10301 www-data  mem       REG              259,6   952616 5411872 /usr/lib/x86_64-linux-gnu/libm.so.6
+nginx   10301 www-data  mem       REG              259,6   371112 5384256 /usr/lib/x86_64-linux-gnu/libnss_systemd.so.2
+nginx   10301 www-data  mem       REG              259,6   113000 5386004 /usr/lib/x86_64-linux-gnu/libz.so.1.3
+nginx   10301 www-data  mem       REG              259,6   696512 5385672 /usr/lib/x86_64-linux-gnu/libssl.so.3
+nginx   10301 www-data  mem       REG              259,6   625344 5376548 /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.11.2
+nginx   10301 www-data  mem       REG              259,6   198664 5385375 /usr/lib/x86_64-linux-gnu/libcrypt.so.1.1.0
+nginx   10301 www-data  mem       REG              259,6    51536 5384125 /usr/lib/x86_64-linux-gnu/libcap.so.2.66
+nginx   10301 www-data  DEL       REG                0,1             2169 /dev/zero
+nginx   10301 www-data  mem       REG              259,6   236616 5411866 /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+nginx   10301 www-data    0u      CHR                1,3      0t0       5 /dev/null
+nginx   10301 www-data    1u      CHR                1,3      0t0       5 /dev/null
+nginx   10301 www-data    2w      REG              259,6     1029 4068399 /var/log/nginx/error.log
+nginx   10301 www-data    3w      REG              259,6     1029 4068399 /var/log/nginx/error.log
+nginx   10301 www-data    4w      REG              259,6        0 4068396 /var/log/nginx/access.log
+nginx   10301 www-data    5u     IPv4             160816      0t0     TCP *:http (LISTEN)
+nginx   10301 www-data    6u     IPv6             160817      0t0     TCP *:http (LISTEN)
+nginx   10301 www-data    7u     unix 0xffff8b77c1874c80      0t0  156747 type=STREAM (CONNECTED)
+nginx   10301 www-data    8u     unix 0xffff8b77c6d68900      0t0  156753 type=STREAM (CONNECTED)
+nginx   10301 www-data    9u     unix 0xffff8b77c6d69b00      0t0  156749 type=STREAM (CONNECTED)
+nginx   10301 www-data   10u     unix 0xffff8b77cdd57980      0t0  156755 type=STREAM (CONNECTED)
+nginx   10301 www-data   11u     unix 0xffff8b77cdd54380      0t0  156757 type=STREAM (CONNECTED)
+nginx   10301 www-data   12u     unix 0xffff8b77c6d6e780      0t0  156752 type=STREAM (CONNECTED)
+nginx   10301 www-data   13u  a_inode               0,16        0    2078 [eventpoll:5,6,12,14]
+nginx   10301 www-data   14u  a_inode               0,16        0    2078 [eventfd:106]
+nginx   10301 www-data   15u     unix 0xffff8b77cdd53a80      0t0  156759 type=STREAM (CONNECTED)
+nginx   10301 www-data   16u     unix 0xffff8b77cecc0d80      0t0  156761 type=STREAM (CONNECTED)
+nginx   10301 www-data   17u     unix 0xffff8b77e1070480      0t0   61157 type=STREAM (CONNECTED)
+nginx   10301 www-data   18u     unix 0xffff8b77e1076c00      0t0   61159 type=STREAM (CONNECTED)
+nginx   10301 www-data   19u     unix 0xffff8b77e1075580      0t0   61161 type=STREAM (CONNECTED)
+nginx   10301 www-data   20u     unix 0xffff8b782ccc9200      0t0   61163 type=STREAM (CONNECTED)
