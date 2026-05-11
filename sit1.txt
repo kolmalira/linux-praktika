@@ -1,1 +1,0 @@
-#ps -eo pid,%cpu,%mem,time,cmd --sort=-%cpu | grep apache2 ps -eo pid,%cpu,%mem,time,cmd --sort=-%cpu
