@@ -1,0 +1,11 @@
+echo "1. Покажите историю установки/обновления пакетов за последние 7 дней 2. Найдите, какие пакеты были обновлены вчера 3. Предложите команду для отката конкретного пакета"
+echo ""
+echo "обновления/установки за 7 дней	grep -E 'install|upgrade' /var/log/dpkg.log" 
+grep -E "install|upgrade" /var/log/dpkg.log
+echo ""
+echo "обновления вчера    grep -E upgrade /var/log/dpkg.log | grep '2026-05-11'" 
+grep -E upgrade /var/log/dpkg.log | grep "2026-05-11"
+echo ""
+echo "для отката можно посмотреть старую версию и установить ее: "
+echo "grep upgrade /var/log/dpkg.log | grep имя_пакета"
+echo "sudo apt install имя_пакета=старая_версия"
